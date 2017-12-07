@@ -1,0 +1,33 @@
+{
+  "name": "paulfreeman.design-2.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pfreema1/paulfreeman.design-2.0.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pfreema1/paulfreeman.design-2.0/issues"
+  },
+  "homepage": "https://github.com/pfreema1/paulfreeman.design-2.0#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.2.0",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.0",
+    "gulp-strip-comments": "^2.5.1",
+    "gulp-watch": "^4.3.11",
+    "postcss-inline-comment": "^3.0.0",
+    "postcss-nested": "^2.1.2",
+    "postcss-simple-vars": "^4.1.0"
+  },
+  "dependencies": {
+    "package.json": "^2.0.1"
+  }
+}
