@@ -1,11 +1,13 @@
 //init ScrollMagic
 var controller = new ScrollMagic.Controller();
 
+//split intro text
 var mySplitText = new SplitText("#text-wrapper", {
 	type: "chars",
 	charsClass: "char++",
 	position: "absolute"
 });
+
 
 
 
@@ -178,3 +180,29 @@ var myBackgroundColorChangeScene = new ScrollMagic.Scene({
 })
 .addTo(controller)
 .setClassToggle("body", "animate-bg-color");
+
+var myLatestWorkBarScene = new ScrollMagic.Scene({
+	triggerElement: '#triggerLatestWorkBar',
+	triggerHook: 1
+}).addTo(controller)
+.addIndicators();
+
+myLatestWorkBarScene.on("enter", function() {
+	$(".latest-work-bar").addClass("animate-bar");
+	$(".climbing-app-image").addClass("animate-fade-and-move");
+	$(".climbing-wall-app-info").addClass("animate-fade-and-move");
+});
+
+myLatestWorkBarScene.on("leave", function() {
+	$(".latest-work-bar").removeClass("animate-bar");
+	$(".climbing-app-image").removeClass("animate-fade-and-move");
+	$(".climbing-wall-app-info").removeClass("animate-fade-and-move");
+});
+
+
+
+//handle learn more button click
+$(".portfolio-project__learn-more-button").on("click", function() {
+	console.log("clicked!");
+	$(this).find("i").toggleClass("rotate-chevron");
+});
