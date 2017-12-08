@@ -236,7 +236,24 @@ thirdPortfolioSlideInScene.on("leave", function() {
 	$(".drift-racer-app-info").removeClass("animate-fade-and-move");
 });
 
+//scene for removing bg color class for about section - fades to black
+//also fades out third portfolio section
+var aboutSectionScene = new ScrollMagic.Scene({
+	triggerElement: '.about-section',
+	triggerHook: 1,
+	offset: 700
+}).addTo(controller)
+.addIndicators();
 
+aboutSectionScene.on("enter", function() {
+	$("body").removeClass("animate-bg-color");
+	$("#triggerThirdPortfolioAnim").addClass("animate-opacity");
+});
+
+aboutSectionScene.on("leave", function() {
+	$("body").addClass("animate-bg-color");
+	$("#triggerThirdPortfolioAnim").removeClass("animate-opacity");
+});
 
 
 

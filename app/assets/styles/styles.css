@@ -295,6 +295,14 @@ body {
     height: 160px;
 }
 
+#triggerThirdPortfolioAnim {
+    transition: all 0.3s ease-in-out;
+}
+
+.animate-opacity {
+    opacity: 0;
+}
+
 .portfolio-project__learn-more-button {
     background-color: $learnMoreColor;
     margin: 70px auto 70px auto;
@@ -386,6 +394,8 @@ svg {
 }
 
 
+
+
 .about-section {
     width: 100vw;
     height: 110vh;
@@ -415,4 +425,9 @@ svg {
         
     }
 
+}
+
+.contact-section {
+    height: 100vh;
+    width: 100vw;
 }

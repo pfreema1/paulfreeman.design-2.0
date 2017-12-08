@@ -313,6 +313,15 @@ body {
     height: 160px;
 }
 
+#triggerThirdPortfolioAnim {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.animate-opacity {
+    opacity: 0;
+}
+
 .portfolio-project__learn-more-button {
     background-color: #D2D2D2;
     margin: 70px auto 70px auto;
@@ -424,6 +433,8 @@ svg {
 }
 
 
+
+
 .about-section {
     width: 100vw;
     height: 110vh;
@@ -444,15 +455,21 @@ svg {
 }
 
 
+
+
 .about-section__text {
         position: relative;
         padding: 100px;
     }
 
 
+
+
 .about-section__text strong {
             font-size: 75px;
         }
+
+
 
 
 .about-section .cube {
@@ -461,3 +478,8 @@ svg {
         background-color: #191919;
         
     }
+
+.contact-section {
+    height: 100vh;
+    width: 100vw;
+}
