@@ -224,9 +224,13 @@ var learnMoreContainers = $(".portfolio-project__learn-more-container");
 //create animation for each learn more container
 var animations = learnMoreContainers.map(function(i, element) {
 	
-	var tween = TweenLite.to(element, 2, {
-		backgroundColor: "blue"
-	});
+	var tween = TweenLite.fromTo(element, 5, 
+		{
+		height: "0px"
+		},
+		{
+			height: "auto"
+		});
 
 
 });
