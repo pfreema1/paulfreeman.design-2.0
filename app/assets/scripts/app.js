@@ -205,8 +205,9 @@ myLatestWorkBarScene.on("leave", function() {
 $(".portfolio-project__learn-more-button").on("click", function() {
 	
 	$(this).find("i").toggleClass("rotate-chevron");
-	
-
+	//get reference to learn more container
+	//var nearestContainerToAnimate = $(this).next();
+	//
 
 });
 
@@ -218,11 +219,15 @@ $(".portfolio-project__learn-more-button").on("click", function() {
 //really good gsap toggle explanation: https://codepen.io/osublake/pen/wKLmzK
 
 //reference to all learn more buttons
-var learnMoreButtons = $(".portfolio-project__learn-more-button");
+var learnMoreContainers = $(".portfolio-project__learn-more-container");
 
-var animations = learnMoreButtons.map(function(i, element) {
-	console.log("inside animations");
-	console.log("i:  " + i);
-	console.log("element:  " + element);
+//create animation for each learn more container
+var animations = learnMoreContainers.map(function(i, element) {
+	
+	var tween = TweenLite.to(element, 2, {
+		backgroundColor: "blue"
+	});
+
+
 });
 
