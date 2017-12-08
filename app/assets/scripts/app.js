@@ -206,32 +206,35 @@ $(".portfolio-project__learn-more-button").on("click", function() {
 	
 	$(this).find("i").toggleClass("rotate-chevron");
 	//get reference to learn more container
-	//var nearestContainerToAnimate = $(this).next();
-	//
-
-});
-
-
-
-
-
-
-//really good gsap toggle explanation: https://codepen.io/osublake/pen/wKLmzK
-
-//reference to all learn more buttons
-var learnMoreContainers = $(".portfolio-project__learn-more-container");
-
-//create animation for each learn more container
-var animations = learnMoreContainers.map(function(i, element) {
+	var nearestContainerToAnimate = $(this).next();
+	var learnMoreText = $(nearestContainerToAnimate).find(">:first-child");
+	console.log(learnMoreText);
 	
-	var tween = TweenLite.fromTo(element, 5, 
-		{
-		height: "0px"
-		},
-		{
-			height: "auto"
-		});
+	if(!$(nearestContainerToAnimate).hasClass("closed")) {
+		//to close
+		// $(nearestContainerToAnimate).css("display", "none");
+		TweenLite.to(nearestContainerToAnimate, 0.2, 
+			{
+			scaleY: 0, 
+			scaleX: 0.7,
+			onComplete: function() {
+				$(nearestContainerToAnimate).css("display", "none");
+			}
+			});
+		TweenLite.to(learnMoreText, 0.05, {opacity: 0});
+		$(nearestContainerToAnimate).addClass("closed");
+	} else {
+		//to open
+		$(nearestContainerToAnimate).css("display", "block");
+		TweenLite.to(nearestContainerToAnimate, 0.2, {scaleY: 1, scaleX: 1});
+		TweenLite.to(learnMoreText, .8, {opacity: 1});
 
+		$(nearestContainerToAnimate).removeClass("closed");
+	}
 
 });
+
+
+
+
 

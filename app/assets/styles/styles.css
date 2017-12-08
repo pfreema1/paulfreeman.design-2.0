@@ -155,7 +155,7 @@ body {
 .portfolio-project-container {
 	min-height: 100vh;
 	width: 100vw;
-
+    margin-bottom: 200px;
 }
 
 .portfolio-project__image-container {
@@ -223,6 +223,7 @@ body {
     padding: 70px;
     margin-left: 70px;
     margin-top: -40px;
+    height: auto;
 }
 
 
@@ -268,7 +269,7 @@ body {
 }
 
 .rotate-chevron {
-    transform: rotate(180deg);
+    transform: scale(-1, -1);
 }
 
 .portfolio-project__learn-more-container {
@@ -280,10 +281,14 @@ body {
     right: 140px; 
     top: -73px;
     padding: 90px 70px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
+    transform-origin: top center;
+    transform: scale(0, 0);
+    display: none;
+}
+
+.portfolio-project__learn-more-container-content {
+    opacity: 0;
 }
 
 
@@ -292,6 +297,7 @@ body {
 .github-button-container {
     margin-top: 90px;
     margin-bottom: 50px;
+    margin: 90px auto 50px auto;
     width: 650px;
     background-color: $bodyColorStart;
     font-family: $primaryFont;
