@@ -205,6 +205,8 @@ myLatestWorkBarScene.on("leave", function() {
 $(".portfolio-project__learn-more-button").on("click", function() {
 	
 	$(this).find("i").toggleClass("rotate-chevron");
+	
+
 
 });
 
@@ -217,29 +219,10 @@ $(".portfolio-project__learn-more-button").on("click", function() {
 
 //reference to all learn more buttons
 var learnMoreButtons = $(".portfolio-project__learn-more-button");
-//create animation for each element
-var animations = learnMoreButtons.map(createAnimation);
 
+var animations = learnMoreButtons.map(function(i, element) {
+	console.log("inside animations");
+	console.log("i:  " + i);
+	console.log("element:  " + element);
+});
 
-function createAnimation(i, element) {
-	var tween = TweenLite.to(element, 1, {
-		backgroundColor: "blue"
-	}).reverse();
-
-	//return a function to toggle the reversed state
-	return function(target) {
-		var reversed = element !== target ? true: !tween.reversed();
-		tween.reversed(reversed);
-	}
-
-}
-
-function playAnimation(event) {
-	//cycle through list of animations, toggling reversed state
-	animations.each(function(i, animate) {
-		animate(event.target);
-	});
-}
-
-
-console.log(animations[0]);
