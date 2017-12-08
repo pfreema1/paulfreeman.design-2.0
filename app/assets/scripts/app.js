@@ -181,6 +181,8 @@ var myBackgroundColorChangeScene = new ScrollMagic.Scene({
 .addTo(controller)
 .setClassToggle("body", "animate-bg-color");
 
+
+//slide in first portfolio project and animate the latest work bar
 var myLatestWorkBarScene = new ScrollMagic.Scene({
 	triggerElement: '#triggerLatestWorkBar',
 	triggerHook: 1
@@ -198,6 +200,44 @@ myLatestWorkBarScene.on("leave", function() {
 	$(".climbing-app-image").removeClass("animate-fade-and-move");
 	$(".climbing-wall-app-info").removeClass("animate-fade-and-move");
 });
+
+
+//slide in second portfolio section
+var secondPortfolioSlideInScene = new ScrollMagic.Scene({
+	triggerElement: '#triggerSecondPortfolioAnim',
+	triggerHook: 1
+}).addTo(controller)
+.addIndicators();
+
+secondPortfolioSlideInScene.on("enter", function() {
+	$(".clear-view-image").addClass("animate-fade-and-move");
+	$(".clear-view-info").addClass("animate-fade-and-move");
+});
+
+secondPortfolioSlideInScene.on("leave", function() {
+	$(".clear-view-image").removeClass("animate-fade-and-move");
+	$(".clear-view-info").removeClass("animate-fade-and-move");
+});
+
+//slide in third portfolio section
+var thirdPortfolioSlideInScene = new ScrollMagic.Scene({
+	triggerElement: '#triggerThirdPortfolioAnim',
+	triggerHook: 1
+}).addTo(controller)
+.addIndicators();
+
+thirdPortfolioSlideInScene.on("enter", function() {
+	$(".drift-racer-image").addClass("animate-fade-and-move");
+	$(".drift-racer-app-info").addClass("animate-fade-and-move");
+});
+
+thirdPortfolioSlideInScene.on("leave", function() {
+	$(".drift-racer-image").removeClass("animate-fade-and-move");
+	$(".drift-racer-app-info").removeClass("animate-fade-and-move");
+});
+
+
+
 
 
 
