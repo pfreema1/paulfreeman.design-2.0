@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Average|Fjalla+One');
 
 $headerFontSize: 100px;
-$normalFontSize: 45px;
+$normalFontSize: 48px;
 $portfolioHeaderFontSize: 80px;
 $primaryFont: 'Fjalla One', sans-serif;
 $secondaryFont: 'Average', serif;
@@ -10,6 +10,8 @@ $primaryAnimationTime: 1.5s;
 $learnMoreColor: #D2D2D2;
 $bodyColorStart: #191919;
 $projectInfoColor: RGBA(238, 238, 238, 1.00);
+$lineHeight: 95px;
+$buttonFontSize: 55px;
 
 
 
@@ -40,6 +42,14 @@ body {
 
 .box-shadow-bigger {
     box-shadow: 8px 10px 37px -6px rgba(0,0,0,0.25);
+}
+
+.box-shadow-biggest {
+    box-shadow: 8px 10px 42px -3px rgba(0,0,0,0.25);
+}
+
+.box-shadow-bigger--no-top {
+    box-shadow: 8px 25px 37px -6px rgba(0,0,0,0.18);
 }
 
 .intro-anim-container {
@@ -223,7 +233,7 @@ body {
     padding: 70px 0;
 }
 
-.fa-external-link {
+.fa-external-link--header {
     font-size: 40px;
     // display: inline-block;
     position: absolute;
@@ -233,7 +243,7 @@ body {
 
 .portfolio-project__blurb-text {
     font-size: $normalFontSize;
-    line-height: 90px;
+    line-height: $lineHeight;
 }
 
 .button {
@@ -248,7 +258,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: $primaryFont;
-    font-size: 50px;
+    font-size: $buttonFontSize;
 }
 
 .fa-chevron-down {
@@ -260,6 +270,50 @@ body {
 .rotate-chevron {
     transform: rotate(180deg);
 }
+
+.portfolio-project__learn-more-container {
+    background-color: $learnMoreColor;
+    font-size: $normalFontSize;
+    line-height: $lineHeight;
+    width: 98vw;
+    position: relative;
+    right: 140px; 
+    top: -73px;
+    padding: 90px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.launch-app-button,
+.github-button-container {
+    margin-top: 90px;
+    margin-bottom: 50px;
+    width: 650px;
+    background-color: $bodyColorStart;
+    font-family: $primaryFont;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $buttonFontSize;
+}
+
+.fa-external-link--launch-app-button {
+    font-size: 100px;
+    margin-right: 70px;
+}
+
+svg {
+    height: 130px;
+    padding-right: 50px;
+}
+
+
+
 
 
 

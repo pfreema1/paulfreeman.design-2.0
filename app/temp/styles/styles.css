@@ -33,6 +33,16 @@ body {
             box-shadow: 8px 10px 37px -6px rgba(0,0,0,0.25);
 }
 
+.box-shadow-biggest {
+    -webkit-box-shadow: 8px 10px 42px -3px rgba(0,0,0,0.25);
+            box-shadow: 8px 10px 42px -3px rgba(0,0,0,0.25);
+}
+
+.box-shadow-bigger--no-top {
+    -webkit-box-shadow: 8px 25px 37px -6px rgba(0,0,0,0.18);
+            box-shadow: 8px 25px 37px -6px rgba(0,0,0,0.18);
+}
+
 .intro-anim-container {
 	height: 350vh;
 	color: white;
@@ -237,7 +247,7 @@ body {
     padding: 70px 0;
 }
 
-.fa-external-link {
+.fa-external-link--header {
     font-size: 40px;
     position: absolute;
     margin-top: 10px;
@@ -245,8 +255,8 @@ body {
 }
 
 .portfolio-project__blurb-text {
-    font-size: 45px;
-    line-height: 90px;
+    font-size: 48px;
+    line-height: 95px;
 }
 
 .button {
@@ -267,7 +277,7 @@ body {
         -ms-flex-align: center;
             align-items: center;
     font-family: 'Fjalla One', sans-serif;
-    font-size: 50px;
+    font-size: 55px;
 }
 
 .fa-chevron-down {
@@ -281,6 +291,65 @@ body {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
 }
+
+.portfolio-project__learn-more-container {
+    background-color: #D2D2D2;
+    font-size: 48px;
+    line-height: 95px;
+    width: 98vw;
+    position: relative;
+    right: 140px; 
+    top: -73px;
+    padding: 90px 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+
+
+.launch-app-button,
+.github-button-container {
+    margin-top: 90px;
+    margin-bottom: 50px;
+    width: 650px;
+    background-color: #191919;
+    font-family: 'Fjalla One', sans-serif;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 55px;
+}
+
+.fa-external-link--launch-app-button {
+    font-size: 100px;
+    margin-right: 70px;
+}
+
+svg {
+    height: 130px;
+    padding-right: 50px;
+}
+
+
+
 
 
 

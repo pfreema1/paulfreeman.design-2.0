@@ -203,6 +203,43 @@ myLatestWorkBarScene.on("leave", function() {
 
 //handle learn more button click
 $(".portfolio-project__learn-more-button").on("click", function() {
-	console.log("clicked!");
+	
 	$(this).find("i").toggleClass("rotate-chevron");
+
 });
+
+
+
+
+
+
+//really good gsap toggle explanation: https://codepen.io/osublake/pen/wKLmzK
+
+//reference to all learn more buttons
+var learnMoreButtons = $(".portfolio-project__learn-more-button");
+//create animation for each element
+var animations = learnMoreButtons.map(createAnimation);
+
+
+function createAnimation(i, element) {
+	var tween = TweenLite.to(element, 1, {
+		backgroundColor: "blue"
+	}).reverse();
+
+	//return a function to toggle the reversed state
+	return function(target) {
+		var reversed = element !== target ? true: !tween.reversed();
+		tween.reversed(reversed);
+	}
+
+}
+
+function playAnimation(event) {
+	//cycle through list of animations, toggling reversed state
+	animations.each(function(i, animate) {
+		animate(event.target);
+	});
+}
+
+
+console.log(animations[0]);
