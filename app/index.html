@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>paulfreeman.design</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- font-awesome -->
 	<link rel="stylesheet" href="./assets/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -303,8 +304,30 @@
 
 	<!-- CONTACT FORM -->
 	<div class="contact-section">
+		<div class="contact-section__header-container">
+			<div class="contact-section__header">CONTACT</div>
+			<div class="contact-section__bar"></div>
 
-		
+
+		</div>
+
+		<div class="contact-section__text">Have a question or want to work together? Let's talk!</div>
+
+		<form id="contact" action="mail.php" method="POST">
+			<input type="text" id="mail-name" name="name" placeholder="Name">
+			<input type="text" id="mail-email" name="email" placeholder="E-mail">
+			<textarea class="textarea-styling" id="mail-message" name="message" placeholder="Your Message"></textarea>
+
+			<p class="form-message"></p>
+
+			<div class="submit-wrapper">
+				<input id="mail-submit" name="submit" type="submit" value="SEND">
+			</div>
+
+
+
+		</form>
+
 	</div>
 
 	<!-- END CONTACT FORM -->

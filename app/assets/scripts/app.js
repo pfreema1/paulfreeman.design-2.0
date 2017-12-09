@@ -241,7 +241,7 @@ thirdPortfolioSlideInScene.on("leave", function() {
 var aboutSectionScene = new ScrollMagic.Scene({
 	triggerElement: '.about-section',
 	triggerHook: 1,
-	offset: 700
+	offset: -600
 }).addTo(controller)
 .addIndicators();
 
@@ -256,6 +256,21 @@ aboutSectionScene.on("leave", function() {
 });
 
 
+//animate contact bar
+var animateContactBarScene = new ScrollMagic.Scene({
+	triggerElement: '.contact-section',
+	triggerHook: 1
+	
+}).addTo(controller)
+.addIndicators();
+
+animateContactBarScene.on("enter", function() {
+	$(".contact-section__bar").addClass("animate-bar");
+});
+
+animateContactBarScene.on("leave", function() {
+	$(".contact-section__bar").removeClass("animate-bar");
+});
 
 
 //handle learn more button click
@@ -265,7 +280,7 @@ $(".portfolio-project__learn-more-button").on("click", function() {
 	//get reference to learn more container
 	var nearestContainerToAnimate = $(this).next();
 	var learnMoreText = $(nearestContainerToAnimate).find(">:first-child");
-	console.log(learnMoreText);
+	// console.log(learnMoreText);
 	
 	if(!$(nearestContainerToAnimate).hasClass("closed")) {
 		//to close
@@ -289,6 +304,25 @@ $(".portfolio-project__learn-more-button").on("click", function() {
 		$(nearestContainerToAnimate).removeClass("closed");
 	}
 
+});
+
+
+//contact form
+$("#contact").submit(function (event) {
+	console.log("meow");
+	event.preventDefault();
+	var name = $("#mail-name").val();
+	var email = $("#mail-email").val();
+	var message = $("#mail-message").val();
+	var submit = $("#mail-submit").val();
+
+	$(".form-message").load("mail.php", {
+		name: name,
+		email: email,
+		message: message,
+		submit: submit
+
+	});
 });
 
 
