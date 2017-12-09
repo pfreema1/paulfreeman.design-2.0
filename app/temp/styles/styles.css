@@ -54,30 +54,30 @@ body {
 }
  
 .box-shadow {
-	-webkit-box-shadow: 4px 6px 28px -6px rgba(0,0,0,0.25);
-	        box-shadow: 4px 6px 28px -6px rgba(0,0,0,0.25);
+	-webkit-box-shadow: 2px 3px 14px -3px rgba(0,0,0,0.25);
+	        box-shadow: 2px 3px 14px -3px rgba(0,0,0,0.25);
 }
 
 .box-shadow-bigger {
-    -webkit-box-shadow: 8px 10px 37px -6px rgba(0,0,0,0.25);
-            box-shadow: 8px 10px 37px -6px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 4px 5px 19px -3px rgba(0,0,0,0.25);
+            box-shadow: 4px 5px 19px -3px rgba(0,0,0,0.25);
 }
 
 .box-shadow-biggest {
-    -webkit-box-shadow: 8px 10px 42px -3px rgba(0,0,0,0.25);
-            box-shadow: 8px 10px 42px -3px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 4px 5px 21px -1px rgba(0,0,0,0.25);
+            box-shadow: 4px 5px 21px -1px rgba(0,0,0,0.25);
 }
 
 .box-shadow-bigger--no-top {
-    -webkit-box-shadow: 8px 25px 37px -6px rgba(0,0,0,0.18);
-            box-shadow: 8px 25px 37px -6px rgba(0,0,0,0.18);
+    -webkit-box-shadow: 4px 12px 19px -3px rgba(0,0,0,0.18);
+            box-shadow: 4px 12px 19px -3px rgba(0,0,0,0.18);
 }
 
 .intro-anim-container {
 	height: 350vh;
 	color: white;
 	font-family: 'Fjalla One', sans-serif;
-	font-size: 60px;
+	font-size: 24px;
 	
 }
 
@@ -85,11 +85,10 @@ body {
 	position: fixed;
 	z-index: 500;
 	text-align: right;
-	letter-spacing: 6px;
 	right: 0;
 	bottom: 0;
-	margin-right: 10px;
-	margin-bottom: 50px;
+	margin-right: 4px;
+	margin-bottom: 20px;
     font-size: 40px;
     pointer-events: none;
 }
@@ -97,16 +96,16 @@ body {
 .trigger1 {
 	position: absolute;
 	background-color: white;
-	height: 10px;
+	height: 4px;
 	width: 75vw;
-	top: 100vh;
+	top: 110vh;
 	right: 0;
 }
 
 .trigger2 {
 	position: absolute;
 	background-color: white;
-	height: 10px;
+	height: 4px;
 	width: 75vw;
 	top: 200vh;
 	right: 0;
@@ -115,7 +114,7 @@ body {
 .trigger3 {
 	position: absolute;
 	background-color: white;
-	height: 10px;
+	height: 4px;
 	width: 75vw;
 	top: 250vh;
 	right: 0;
@@ -124,7 +123,7 @@ body {
 .trigger4 {
 	position: absolute;
 	background-color: white;
-	height: 10px;
+	height: 4px;
 	width: 75vw;
 	top: 300vh;
 	right: 0;
@@ -161,8 +160,8 @@ body {
 	        align-items: center;
 	
 	color: RGBA(205, 205, 205, 1.00);
-	line-height: 110px;
-	font-size: 20px;
+	line-height: 38px;
+	font-size: 17px;
 }
 
 .about-blurb-container strong {
@@ -170,13 +169,13 @@ body {
 }
 
 .about-blurb__image-container {
-	width: 200px;
-	height: 200px;
-	margin-bottom: 50px;
+	width: 80px;
+	height: 80px;
+	margin-bottom: 20px;
 }
 
 .about-blurb__image {
-	height: 200px;
+	height: 80px;
 	width: auto;
 	border-radius: 50%;
     
@@ -185,7 +184,7 @@ body {
 .portfolio-project-container {
 	min-height: 100vh;
 	width: 100vw;
-    margin-bottom: 200px;
+    margin-bottom: 80px;
     overflow: hidden;
 }
 
@@ -222,83 +221,84 @@ body {
             justify-content: center;
     font-size: 40px;
     font-family: 'Fjalla One', sans-serif;
-    margin: 100px 0;
+    margin: 40px 0;
 }
 
 .portfolio-project__project-info-container {
     background-color: RGBA(238, 238, 238, 1.00);
     width: 90vw;
-    padding: 70px;
-    margin-left: 70px;
-    margin-top: -70px;
+    padding: 28px;
+    margin-left: 28px;
+    margin-top: -28px;
+    margin-bottom: 20px;
     height: auto;
 }
 
 
 .latest-work-bar {
     background-color: black;
-    height: 10px;
+    height: 4px;
     width: 30%;
-    margin: 100px 0 0 0;
+    margin: 40px 0 0 0;
     -webkit-transform: scale(0);
             transform: scale(0);
-    -webkit-transition: all 2s ease-in-out;
-    transition: all 2s ease-in-out;
+    -webkit-transition: all 1.7s ease-in-out;
+    transition: all 1.7s ease-in-out;
 
 }
 
 .climbing-app-image {
     opacity: 0;
-    -webkit-transform: translateX(40px);
-            transform: translateX(40px);
-    -webkit-transition: all 2s ease-in-out;
-    transition: all 2s ease-in-out;
+    -webkit-transform: translateX(16px);
+            transform: translateX(16px);
+    -webkit-transition: all 1.7s ease-in-out;
+    transition: all 1.7s ease-in-out;
 
 }
 
 
 .climbing-wall-app-info {
-    -webkit-transform: translateX(-60px);
-            transform: translateX(-60px);
+    -webkit-transform: translateX(-24px);
+            transform: translateX(-24px);
     opacity: 0;
-    -webkit-transition: all 2s ease-in-out;
-    transition: all 2s ease-in-out;
+    -webkit-transition: all 1.7s ease-in-out;
+    transition: all 1.7s ease-in-out;
 }
 
 .clear-view-image {
     opacity: 0;
-    margin-left: 30px;
-    -webkit-transform: translateX(-120px);
-            transform: translateX(-120px);
-    -webkit-transition: all 2s ease-in-out;
-    transition: all 2s ease-in-out;
+    margin-left: 12px;
+    -webkit-transform: translateX(-48px);
+            transform: translateX(-48px);
+    -webkit-transition: all 1.7s ease-in-out;
+    transition: all 1.7s ease-in-out;
 }
 
 .clear-view-info {
-    margin-right: 50px;
-    -webkit-transform: translateX(60px);
-            transform: translateX(60px);
+    margin-right: 20px;
+    -webkit-transform: translateX(24px);
+            transform: translateX(24px);
     opacity: 0;
-    -webkit-transition: all 2s ease-in-out;
-    transition: all 2s ease-in-out;
+    -webkit-transition: all 1.7s ease-in-out;
+    transition: all 1.7s ease-in-out;
 }
 
 
 
 .drift-racer-image {
     opacity: 0;
-    -webkit-transform: translateX(40px);
-            transform: translateX(40px);
-    -webkit-transition: all 2s ease-in-out;
-    transition: all 2s ease-in-out;
+    -webkit-transform: translateX(16px);
+            transform: translateX(16px);
+    -webkit-transition: all 1.7s ease-in-out;
+    transition: all 1.7s ease-in-out;
 }
 
 .drift-racer-app-info {
-    -webkit-transform: translateX(-60px);
-            transform: translateX(-60px);
+    -webkit-transform: translateX(-24px);
+            transform: translateX(-24px);
     opacity: 0;
-    -webkit-transition: all 2s ease-in-out;
-    transition: all 2s ease-in-out;
+    -webkit-transition: all 1.7s ease-in-out;
+    transition: all 1.7s ease-in-out;
 }
 
 
@@ -318,25 +318,25 @@ body {
 .portfolio-project__header {
     text-align: center;
     font-family: 'Fjalla One', sans-serif;
-    font-size: 80px;
-    padding: 90px 0 40px 0;
+    font-size: 27px;
+    padding: 18px 0 16px 0;
 }
 
 .fa-external-link--header {
-    font-size: 40px;
+    font-size: 16px;
     position: absolute;
-    margin-top: 10px;
-    margin-left: 30px;
+    margin-top: 4px;
+    margin-left: 12px;
 }
 
 .portfolio-project__blurb-text {
-    font-size: 20px;
-    line-height: 95px;
+    font-size: 17px;
+    line-height: 38px;
 }
 
 .button {
-    width: 500px;
-    height: 160px;
+    width: 200px;
+    height: 64px;
 }
 
 #triggerThirdPortfolioAnim {
@@ -350,7 +350,7 @@ body {
 
 .portfolio-project__learn-more-button {
     background-color: #D2D2D2;
-    margin: 70px auto 70px auto;
+    margin: 28px auto 28px auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -361,12 +361,12 @@ body {
         -ms-flex-align: center;
             align-items: center;
     font-family: 'Fjalla One', sans-serif;
-    font-size: 55px;
+    font-size: 17px;
 }
 
 .fa-chevron-down {
-    font-size: 40px;
-    margin-left: 40px;
+    font-size: 16px;
+    margin-left: 16px;
     -webkit-transition: all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out;
 }
@@ -380,13 +380,13 @@ body {
 
 .portfolio-project__learn-more-container {
     background-color: #D2D2D2;
-    font-size: 20px;
-    line-height: 95px;
+    font-size: 17px;
+    line-height: 38px;
     width: 98vw;
     position: relative;
-    right: 140px; 
-    top: -73px;
-    padding: 90px 70px;
+    right: 56px; 
+    top: -29px;
+    padding: 36px 28px;
     
     -webkit-transform-origin: top center;
     
@@ -404,10 +404,10 @@ body {
 
 .launch-app-button,
 .github-button-container {
-    margin-top: 90px;
-    margin-bottom: 50px;
-    margin: 90px auto 50px auto;
-    width: 650px;
+    margin-top: 36px;
+    margin-bottom: 20px;
+    margin: 36px auto 20px auto;
+    width: 260px;
     background-color: #191919;
     font-family: 'Fjalla One', sans-serif;
     color: white;
@@ -420,26 +420,27 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    font-size: 55px;
+    font-size: 17px;
 }
 
 .fa-external-link--launch-app-button {
-    font-size: 100px;
-    margin-right: 70px;
+    font-size: 40px;
+    margin-right: 28px;
 }
 
 .fa-youtube-play {
-    font-size: 100px;
-    margin-right: 70px;
+    font-size: 40px;
+    margin-right: 28px;
 }
 
-svg {
-    height: 130px;
-    padding-right: 50px;
+.github-svg {
+    height: 52px;
+    padding-right: 20px;
 }
 
 .google-play-button {
-    margin: 90px auto 50px auto;
+
+    margin: 36px auto 20px auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -452,8 +453,7 @@ svg {
 }
 
 .google-play-badge {
-    height: 150%;
-    width: auto;
+    width: 97%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -464,7 +464,7 @@ svg {
 .about-section {
     width: 100vw;
     height: 110vh;
-    font-size: 20px;
+    font-size: 17px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -474,10 +474,10 @@ svg {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    line-height: 110px;
+    line-height: 38px;
     color: white;
-    margin-top: 1600px;
-    margin-bottom: 800px;
+    margin-top: 640px;
+    margin-bottom: 320px;
 
 }
 
@@ -486,22 +486,22 @@ svg {
 
 .about-section__text {
         position: relative;
-        padding: 100px;
+        padding: 40px;
     }
 
 
 
 
 .about-section__text strong {
-            font-size: 75px;
+            font-size: 30px;
         }
 
 
 
 
 .about-section .cube {
-        width: 300px;
-        height: 300px;
+        width: 120px;
+        height: 120px;
         background-color: #191919;
         
     }
@@ -510,7 +510,7 @@ svg {
     height: 100vh;
     width: 100vw;
     color: white;
-    margin-top: 400px;
+    margin-top: 160px;
 
     
 
@@ -530,7 +530,7 @@ svg {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        margin: 100px 0;
+        margin: 40px 0;
     }
 
 .contact-section__header {
@@ -540,24 +540,24 @@ svg {
 
 .contact-section__bar {
         background-color: white;
-        height: 10px;
+        height: 4px;
         width: 30%;
-        margin: 100px 0 0 0;
+        margin: 40px 0 0 0;
         -webkit-transform: scale(0);
                 transform: scale(0);
-        -webkit-transition: all 2s ease-in-out;
-        transition: all 2s ease-in-out;
+        -webkit-transition: all 1.7s ease-in-out;
+        transition: all 1.7s ease-in-out;
 
     }
 
 .contact-section__text {
         font-family: 'Average', serif;
-        font-size: 20px;
-        padding: 0 100px 0 100px;
+        font-size: 17px;
+        padding: 0 40px 0 40px;
     }
 
 form {
-    font-size: 20px;
+    font-size: 17px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -565,7 +565,7 @@ form {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 70px 100px 100px 100px;
+    padding: 28px 30px 40px 30px;
     
 }
 
@@ -573,35 +573,35 @@ form input, form textarea {
         -webkit-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
         outline: none;
-        border: 5px solid white; 
+        border: 2px solid white; 
          
     }
 
 form input:focus, form textarea:focus {
-        -webkit-box-shadow: 0 0 50px rgba(81, 203, 238, 1);
-                box-shadow: 0 0 50px rgba(81, 203, 238, 1);
-        border: 5px solid rgba(81, 203, 238, 1);
+        -webkit-box-shadow: 0 0 20px rgba(81, 203, 238, 1);
+                box-shadow: 0 0 20px rgba(81, 203, 238, 1);
+        border: 2px solid rgba(81, 203, 238, 1);
     }
 
 form input {
-        font-size: 20px;
+        font-size: 17px;
         font-family: 'Average', serif;
-        height: 100px;
-        margin: 40px 0;
-        padding: 30px;
+        height: 40px;
+        margin: 16px 0;
+        padding: 12px;
     }
 
 form textarea {
-        margin: 40px 0;
-        padding: 30px;
-        font-size: 20px;
-        height: 300px;
+        margin: 16px 0;
+        padding: 12px;
+        font-size: 17px;
+        height: 120px;
         font-family: 'Average', serif;
     }
 
 form .form-message {
         display: inline-block;
-        font-size: 20px;
+        font-size: 17px;
         color: white;
     }
 
@@ -617,8 +617,8 @@ form .submit-wrapper {
     }
 
 form .submit-wrapper input {
-            height: 150px;
-            width: 200px;
+            height: 50px;
+            width: 80px;
             border-radius: 0;
             font-family: 'Fjalla One', sans-serif;
             padding: 0;
@@ -633,6 +633,63 @@ form .submit-wrapper input {
     -webkit-transform: scale(1);
             transform: scale(1);
 }
+
+.footer {
+    height: 140px;
+    width: 100vw;
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+
+    padding: 30px;
+    padding-right: 20px;
+
+}
+
+.footer__codepen {
+        width: 49px;
+        height: 49px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        overflow: hidden;
+        padding: 0 10px 0 10px;
+        border-radius: 50%;
+    }
+
+.footer__codepen img{
+        width: 73px;
+    }
+
+.footer__github {
+        height: 52px;
+        padding: 0 0px 0 8px;
+    }
+
+.footer__github svg {
+            padding: 0;
+        }
+
+.footer__facebook {
+        color: white;
+        font-size: 42px;
+        padding: 0 10px 0 8px;
+    }
 
 
 

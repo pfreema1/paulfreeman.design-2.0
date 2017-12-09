@@ -241,7 +241,7 @@ thirdPortfolioSlideInScene.on("leave", function() {
 var aboutSectionScene = new ScrollMagic.Scene({
 	triggerElement: '.about-section',
 	triggerHook: 1,
-	offset: -600
+	offset: -120
 }).addTo(controller)
 .addIndicators();
 
