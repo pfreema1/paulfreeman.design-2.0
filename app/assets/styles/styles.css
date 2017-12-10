@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Average|Fjalla+One');
 
 $headerFontSize: 40px;
+$frontAnimFontSize: 55px;
 $normalFontSize: 17px;
 $portfolioHeaderFontSize: 27px;
 $primaryFont: 'Fjalla One', sans-serif;
@@ -13,6 +14,29 @@ $projectInfoColor: RGBA(238, 238, 238, 1.00);
 $lineHeight: 38px;
 $buttonFontSize: 17px;
 $marginBetweenSectionHeaderAndContent: 40px;
+
+
+
+/******  MIXINS ********/
+@define-mixin atSmall {
+    @media (min-width: 530px) {
+        @mixin-content;
+    }
+}
+
+@define-mixin atMedium {
+    @media (min-width: 768px) {
+        @mixin-content;
+    }
+}
+
+@define-mixin atLarge{
+    @media (min-width: 1200px) {
+        @mixin-content;
+    }
+}
+
+
 
 
 
@@ -102,8 +126,10 @@ body {
 	bottom: 0;
 	margin-right: 4px;
 	margin-bottom: 20px;
-    font-size: $headerFontSize;
+    font-size: $frontAnimFontSize;
     pointer-events: none;
+
+
 }
 
 .trigger1 {
@@ -190,6 +216,14 @@ body {
 	width: 100vw;
     margin-bottom: 80px;
     overflow: hidden;
+
+    @mixin atLarge {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    
 }
 
 .portfolio-project__image-container {
@@ -202,6 +236,11 @@ body {
     height: auto;
     position: relative;
     z-index: 100;
+
+    @mixin atLarge {
+        max-width: 800px;
+        
+    }
 }
 
 
@@ -224,6 +263,7 @@ body {
 .portfolio-project__project-info-container {
     background-color: $projectInfoColor;
     width: 90vw;
+    max-width: 700px;
     padding: 28px;
     margin-left: 28px;
     margin-top: -28px;
@@ -317,6 +357,14 @@ body {
 .portfolio-project__blurb-text {
     font-size: $normalFontSize;
     line-height: $lineHeight;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    @mixin atMedium {
+        max-width: 400px;
+    }
 }
 
 .button {
@@ -363,14 +411,26 @@ body {
     right: 56px; 
     top: -29px;
     padding: 36px 28px;
+    justify-content: center;
+    align-items: center;
     
     transform-origin: top center;
     transform: scale(0, 0);
     display: none;
+
+    @mixin atMedium {
+        width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+        right: 0;
+    }
+
 }
 
 .portfolio-project__learn-more-container-content {
     opacity: 0;
+    max-width: 450px;
+    padding-top: 10px;
 }
 
 
@@ -414,7 +474,7 @@ body {
 }
 
 .google-play-badge {
-    width: 97%;
+    width: 250px;
     // width: auto;
     margin-left: auto;
     margin-right: auto;
@@ -434,8 +494,11 @@ body {
     // position: relative;
     // overflow: hidden;
     color: white;
-    margin-top: 640px;
+    margin-top: 600px;
     margin-bottom: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 450px;
 
     &__text {
         position: relative;
@@ -455,6 +518,10 @@ body {
         
     }
 
+    @mixin atMedium {
+        margin-top: 400px;
+    }
+
 }
 
 .contact-section {
@@ -462,6 +529,9 @@ body {
     width: 100vw;
     color: white;
     margin-top: 160px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 
     &__header-container {
         display: flex;
@@ -575,22 +645,14 @@ form {
     justify-content: flex-end;
 
     padding: 30px;
-    padding-right: 20px;
+    padding-right: 40px;
 
-    &__codepen {
-        width: 49px;
-        height: 49px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        padding: 0 10px 0 10px;
-        border-radius: 50%;
+    .codepen-test {
+        width: 43px;
+        margin-top: 5px;
+
     }
 
-    &__codepen img{
-        width: 73px;
-    }
 
     &__github {
         height: 52px;
@@ -607,18 +669,12 @@ form {
         padding: 0 10px 0 8px;
     }
 
-}
-
-
-
-
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
-
     
 
-     
-     
 }
+
+
+
+
+
+

@@ -238,9 +238,7 @@ var myBackgroundColorChangeScene = new ScrollMagic.Scene({
 var myLatestWorkBarScene = new ScrollMagic.Scene({
   triggerElement: "#triggerLatestWorkBar",
   triggerHook: 1
-})
-  .addTo(controller)
-  .addIndicators();
+}).addTo(controller);
 
 myLatestWorkBarScene.on("enter", function() {
   $(".latest-work-bar").addClass("animate-bar");
@@ -258,9 +256,7 @@ myLatestWorkBarScene.on("leave", function() {
 var secondPortfolioSlideInScene = new ScrollMagic.Scene({
   triggerElement: "#triggerSecondPortfolioAnim",
   triggerHook: 1
-})
-  .addTo(controller)
-  .addIndicators();
+}).addTo(controller);
 
 secondPortfolioSlideInScene.on("enter", function() {
   $(".clear-view-image").addClass("animate-fade-and-move");
@@ -276,9 +272,7 @@ secondPortfolioSlideInScene.on("leave", function() {
 var thirdPortfolioSlideInScene = new ScrollMagic.Scene({
   triggerElement: "#triggerThirdPortfolioAnim",
   triggerHook: 1
-})
-  .addTo(controller)
-  .addIndicators();
+}).addTo(controller);
 
 thirdPortfolioSlideInScene.on("enter", function() {
   $(".drift-racer-image").addClass("animate-fade-and-move");
@@ -296,9 +290,7 @@ var aboutSectionScene = new ScrollMagic.Scene({
   triggerElement: ".about-section",
   triggerHook: 1,
   offset: -120
-})
-  .addTo(controller)
-  .addIndicators();
+}).addTo(controller);
 
 aboutSectionScene.on("enter", function() {
   $("body").removeClass("animate-bg-color");
@@ -314,9 +306,7 @@ aboutSectionScene.on("leave", function() {
 var animateContactBarScene = new ScrollMagic.Scene({
   triggerElement: ".contact-section",
   triggerHook: 1
-})
-  .addTo(controller)
-  .addIndicators();
+}).addTo(controller);
 
 animateContactBarScene.on("enter", function() {
   $(".contact-section__bar").addClass("animate-bar");
@@ -350,7 +340,7 @@ $(".portfolio-project__learn-more-button").on("click", function() {
     $(nearestContainerToAnimate).addClass("closed");
   } else {
     //to open
-    $(nearestContainerToAnimate).css("display", "block");
+    $(nearestContainerToAnimate).css("display", "flex");
     TweenLite.to(nearestContainerToAnimate, 0.2, { scaleY: 1, scaleX: 1 });
     TweenLite.to(learnMoreText, 0.8, { opacity: 1 });
 
