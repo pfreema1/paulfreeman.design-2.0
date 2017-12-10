@@ -199,13 +199,13 @@ body {
 }
 
 .about-blurb__image-container {
-	width: 80px;
-	height: 80px;
+	width: 100px;
+	height: 100px;
 	margin-bottom: 20px;
 }
 
 .about-blurb__image {
-	height: 80px;
+	height: 100px;
 	width: auto;
 	border-radius: 50%;
     
@@ -525,7 +525,7 @@ body {
 }
 
 .contact-section {
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     color: white;
     margin-top: 160px;
@@ -533,12 +533,18 @@ body {
     margin-left: auto;
     margin-right: auto;
 
+    @mixin atMedium {
+        height: 70vh;
+    }
+
     &__header-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         margin: $marginBetweenSectionHeaderAndContent 0;
+
+        
     }
 
     &__header {

@@ -227,12 +227,25 @@ var myScene4 = new ScrollMagic.Scene({
 //add tween to scrollmagic
 myScene4.setTween(timeline4);
 
+//this scene also triggers the lazyload of later images
 var myBackgroundColorChangeScene = new ScrollMagic.Scene({
   triggerElement: ".trigger4",
   triggerHook: 1
 })
   .addTo(controller)
   .setClassToggle("body", "animate-bg-color");
+
+myBackgroundColorChangeScene.on("enter", lazyLoadImages);
+
+function lazyLoadImages() {
+  var lazyElements = $("img[data-src]");
+
+  for (var i = 0; i < lazyElements.length; i++) {
+    var src = $(lazyElements[i]).attr("data-src");
+    $(lazyElements[i]).attr("src", src);
+    $(lazyElements[i]).removeAttr("data-src");
+  }
+}
 
 //slide in first portfolio project and animate the latest work bar
 var myLatestWorkBarScene = new ScrollMagic.Scene({

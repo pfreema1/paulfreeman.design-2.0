@@ -177,13 +177,13 @@ body {
 }
 
 .about-blurb__image-container {
-	width: 80px;
-	height: 80px;
+	width: 100px;
+	height: 100px;
 	margin-bottom: 20px;
 }
 
 .about-blurb__image {
-	height: 80px;
+	height: 100px;
 	width: auto;
 	border-radius: 50%;
     
@@ -591,7 +591,7 @@ body {
     }
 
 .contact-section {
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     color: white;
     margin-top: 160px;
@@ -602,6 +602,16 @@ body {
     
 
 }
+
+@media (min-width: 768px) {
+
+.contact-section {
+        height: 70vh
+
+    
+
+}
+    }
 
 .contact-section__header-container {
         display: -webkit-box;
@@ -618,6 +628,8 @@ body {
             -ms-flex-align: center;
                 align-items: center;
         margin: 40px 0;
+
+        
     }
 
 .contact-section__header {
