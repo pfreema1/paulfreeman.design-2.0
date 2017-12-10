@@ -388,12 +388,14 @@ body {
     align-items: center;
     font-family: $primaryFont;
     font-size: $buttonFontSize;
+    padding-left: 17px;
 }
 
-.fa-chevron-down {
+.icon-down-open {
     font-size: 16px;
     margin-left: 16px;
     transition: all 0.15s ease-in-out;
+    margin-top: -3px;
 }
 
 
@@ -672,7 +674,8 @@ form {
     &__facebook {
         color: white;
         font-size: 42px;
-        padding: 0 10px 0 8px;
+        padding: 0 10px 0 0px;
+        margin-left: -9px;
     }
 
     

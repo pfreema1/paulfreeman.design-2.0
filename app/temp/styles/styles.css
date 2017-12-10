@@ -409,13 +409,15 @@ body {
             align-items: center;
     font-family: 'Fjalla One', sans-serif;
     font-size: 17px;
+    padding-left: 17px;
 }
 
-.fa-chevron-down {
+.icon-down-open {
     font-size: 16px;
     margin-left: 16px;
     -webkit-transition: all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out;
+    margin-top: -3px;
 }
 
 
@@ -774,7 +776,8 @@ form .submit-wrapper input {
 .footer__facebook {
         color: white;
         font-size: 42px;
-        padding: 0 10px 0 8px;
+        padding: 0 10px 0 0px;
+        margin-left: -9px;
     }
 
 
