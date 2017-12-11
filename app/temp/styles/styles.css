@@ -108,7 +108,7 @@ body {
 	text-align: right;
 	right: 0;
 	bottom: 0;
-	margin-right: 4px;
+	margin-right: 20px;
 	margin-bottom: 20px;
     font-size: 55px;
     pointer-events: none;
@@ -624,7 +624,7 @@ body {
 
 
 .about-section {
-        margin-top: 400px
+        padding-bottom: 550px
 
 }
     }
