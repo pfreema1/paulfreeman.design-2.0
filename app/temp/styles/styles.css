@@ -781,6 +781,87 @@ form .submit-wrapper input {
     }
 
 
+.fade-out-loader {
+    opacity: 0;
+}
+
+.loading-anim-container {
+    position: fixed;
+    background-color: #191919;
+    height: 100vh;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 900;
+
+    -webkit-transform: scale(1.5);
+
+            transform: scale(1.5);
+    
+    -webkit-transition: all 0.5s ease-in-out;
+    
+    transition: all 0.5s ease-in-out;
+
+    pointer-events: none;
+}
+
+.loading,
+    .loading::before,
+    .loading::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid rgba(255, 255, 255, .02);
+    border-left-color: rgba(255, 255, 255, 1.4);
+    border-radius: 999px;
+    }
+
+    .loading {
+    margin: -25px 0 0 -25px;
+    height: 100px;
+    width: 100px;
+    -webkit-animation: animation-rotate 1000ms linear infinite;
+    animation: animation-rotate 1000ms linear infinite;
+    }
+
+    .loading::before {
+    content: "";
+    margin: -23px 0 0 -23px;
+    height: 44px;
+    width: 44px;
+    -webkit-animation: animation-rotate 1000ms linear infinite;
+    animation: animation-rotate 1000ms linear infinite;
+    }
+
+    .loading::after {
+    content: "";
+    margin: -29px 0 0 -29px;
+    height: 56px;
+    width: 56px;
+    -webkit-animation: animation-rotate 2000ms linear infinite;
+    animation: animation-rotate 2000ms linear infinite;
+    }
+
+    @-webkit-keyframes animation-rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+    }
+
+    @keyframes animation-rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+    }
+
 
 
 

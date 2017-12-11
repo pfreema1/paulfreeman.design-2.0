@@ -1,3 +1,34 @@
+//disable scrolling while loading
+$("html, body").css({
+  overflow: "hidden",
+  height: "100%"
+});
+
+$(document).ready(function() {
+  // console.log("all loaded!");
+
+  $(".loading-anim-container").addClass("fade-out-loader");
+
+  $(this).scrollTop(0);
+
+  $("html, body").css({
+    overflow: "auto",
+    height: "auto"
+  });
+
+  lazyLoadImages();
+});
+
+function lazyLoadImages() {
+  var lazyElements = $("img[data-src]");
+
+  for (var i = 0; i < lazyElements.length; i++) {
+    var src = $(lazyElements[i]).attr("data-src");
+    $(lazyElements[i]).attr("src", src);
+    $(lazyElements[i]).removeAttr("data-src");
+  }
+}
+
 //init ScrollMagic
 var controller = new ScrollMagic.Controller();
 
@@ -235,17 +266,7 @@ var myBackgroundColorChangeScene = new ScrollMagic.Scene({
   .addTo(controller)
   .setClassToggle("body", "animate-bg-color");
 
-myBackgroundColorChangeScene.on("enter", lazyLoadImages);
-
-function lazyLoadImages() {
-  var lazyElements = $("img[data-src]");
-
-  for (var i = 0; i < lazyElements.length; i++) {
-    var src = $(lazyElements[i]).attr("data-src");
-    $(lazyElements[i]).attr("src", src);
-    $(lazyElements[i]).removeAttr("data-src");
-  }
-}
+//myBackgroundColorChangeScene.on("enter", lazyLoadImages);
 
 //slide in first portfolio project and animate the latest work bar
 var myLatestWorkBarScene = new ScrollMagic.Scene({
@@ -331,6 +352,8 @@ animateContactBarScene.on("leave", function() {
 
 //handle learn more button click
 $(".portfolio-project__learn-more-button").on("click", function() {
+  // console.log("wtf");
+
   $(this)
     .find("i")
     .toggleClass("rotate-chevron");
