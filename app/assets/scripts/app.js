@@ -10,7 +10,7 @@ font.load().then(splitTextAndSetupAnims, function() {
 });
 
 function splitTextAndSetupAnims() {
-  console.log("starting splitTextAndSetupAnims");
+  // console.log("starting splitTextAndSetupAnims");
 
   //split intro text
   var mySplitText = new SplitText("#text-wrapper", {

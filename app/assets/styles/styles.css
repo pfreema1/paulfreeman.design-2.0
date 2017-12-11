@@ -558,6 +558,7 @@ body {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 180px;
 
     @mixin atMedium {
         height: 70vh;
@@ -592,6 +593,7 @@ body {
         font-family: $secondaryFont;
         font-size: $normalFontSize;
         padding: 0 40px 0 40px;
+        line-height: 38px;
     }
 
     
@@ -642,7 +644,7 @@ form {
 
     .submit-wrapper {
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         border-radius: 0;
         
         input {
