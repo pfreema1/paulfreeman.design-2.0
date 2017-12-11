@@ -86,8 +86,23 @@ body {
 	font-size: 24px;
 	
 }
+
+@media (min-width: 768px) {
+
+.intro-anim-container {
+        height: 280vh
+	
+}
+    }
  
 #text-wrapper {
+    -webkit-text-rendering: optimizeSpeed !important;
+    text-rendering: optimizeSpeed !important;
+    -webkit-transform: translateZ(0) !important;
+    -webkit-font-kerning: none !important;
+            font-kerning: none !important;
+
+
 	position: fixed;
 	z-index: 500;
 	text-align: right;
@@ -98,6 +113,7 @@ body {
     font-size: 55px;
     pointer-events: none;
 
+    
 
 }
 
@@ -119,6 +135,13 @@ body {
 	right: 0;
 }
 
+@media (min-width: 768px) {
+
+.trigger2 {
+        top: 150vh
+}
+    }
+
 .trigger3 {
 	position: absolute;
 	background-color: white;
@@ -128,6 +151,13 @@ body {
 	right: 0;
 }
 
+@media (min-width: 768px) {
+
+.trigger3 {
+        top: 200vh
+}
+    }
+
 .trigger4 {
 	position: absolute;
 	background-color: white;
@@ -136,6 +166,13 @@ body {
 	top: 300vh;
 	right: 0;
 }
+
+@media (min-width: 768px) {
+
+.trigger4 {
+        top: 250vh
+}
+    }
 
 
 .animate-bg-color {

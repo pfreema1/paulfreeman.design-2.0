@@ -1,12 +1,15 @@
+var font = new FontFaceObserver("Fjalla One", {});
+
 //disable scrolling while loading
 $("html, body").css({
   overflow: "hidden",
   height: "100%"
 });
 
-$(document).ready(function() {
-  // console.log("all loaded!");
+//re-enable scrolling, jump to top of page, fade out loader, and download images
+//when initial items are downloaded
 
+$(document).ready(function() {
   $(".loading-anim-container").addClass("fade-out-loader");
 
   $(this).scrollTop(0);

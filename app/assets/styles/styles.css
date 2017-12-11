@@ -113,15 +113,24 @@ body {
 	font-family: $primaryFont;
 	font-size: 24px;
 	// background-color: #191919;
+
+    @mixin atMedium {
+        height: 280vh;
+    }
 	
 }
  
 #text-wrapper {
+    -webkit-text-rendering: optimizeSpeed !important;
+    text-rendering: optimizeSpeed !important;
+    -webkit-transform: translateZ(0) !important;
+    font-kerning: none !important;
+
+
 	position: fixed;
 	z-index: 500;
 	// background-color: blue;
 	text-align: right;
-	// letter-spacing: 2px;
 	right: 0;
 	bottom: 0;
 	margin-right: 4px;
@@ -129,6 +138,7 @@ body {
     font-size: $frontAnimFontSize;
     pointer-events: none;
 
+    
 
 }
 
@@ -148,6 +158,10 @@ body {
 	width: 75vw;
 	top: 200vh;
 	right: 0;
+
+    @mixin atMedium {
+        top: 150vh;
+    }
 }
 
 .trigger3 {
@@ -157,6 +171,10 @@ body {
 	width: 75vw;
 	top: 250vh;
 	right: 0;
+
+    @mixin atMedium {
+        top: 200vh;
+    }
 }
 
 .trigger4 {
@@ -166,6 +184,10 @@ body {
 	width: 75vw;
 	top: 300vh;
 	right: 0;
+
+    @mixin atMedium {
+        top: 250vh;
+    }
 }
 
 
