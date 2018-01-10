@@ -279,7 +279,6 @@ function lazyLoadImages() {
   }
 }
 
-//myBackgroundColorChangeScene.on("enter", lazyLoadImages);
 
 //slide in first portfolio project and animate the latest work bar
 var myLatestWorkBarScene = new ScrollMagic.Scene({
@@ -289,14 +288,35 @@ var myLatestWorkBarScene = new ScrollMagic.Scene({
 
 myLatestWorkBarScene.on("enter", function() {
   $(".latest-work-bar").addClass("animate-bar");
+  $(".pomodorank-image").addClass("animate-fade-and-move");
+  $(".pomodorank-info").addClass("animate-fade-and-move");
+});
+
+
+/*// ORIGINAL
+myLatestWorkBarScene.on("enter", function() {
+  $(".latest-work-bar").addClass("animate-bar");
   $(".climbing-app-image").addClass("animate-fade-and-move");
   $(".climbing-wall-app-info").addClass("animate-fade-and-move");
 });
 
-myLatestWorkBarScene.on("leave", function() {
-  $(".latest-work-bar").removeClass("animate-bar");
-  $(".climbing-app-image").removeClass("animate-fade-and-move");
-  $(".climbing-wall-app-info").removeClass("animate-fade-and-move");
+*/
+
+// myLatestWorkBarScene.on("leave", function() {
+//   $(".latest-work-bar").removeClass("animate-bar");
+//   $(".climbing-app-image").removeClass("animate-fade-and-move");
+//   $(".climbing-wall-app-info").removeClass("animate-fade-and-move");
+// });
+
+//slide in climbing-wall-app portfolio secton
+var climbingWallAppSlideInScene = new ScrollMagic.Scene({
+  triggerElement: "#triggerClimbingWallAppAnim",
+  triggerHook: 1
+}).addTo(controller);
+
+climbingWallAppSlideInScene.on("enter", function() {
+  $(".climbing-app-image").addClass("animate-fade-and-move");
+  $(".climbing-wall-app-info").addClass("animate-fade-and-move");
 });
 
 //slide in second portfolio section
@@ -310,10 +330,10 @@ secondPortfolioSlideInScene.on("enter", function() {
   $(".clear-view-info").addClass("animate-fade-and-move");
 });
 
-secondPortfolioSlideInScene.on("leave", function() {
-  $(".clear-view-image").removeClass("animate-fade-and-move");
-  $(".clear-view-info").removeClass("animate-fade-and-move");
-});
+// secondPortfolioSlideInScene.on("leave", function() {
+//   $(".clear-view-image").removeClass("animate-fade-and-move");
+//   $(".clear-view-info").removeClass("animate-fade-and-move");
+// });
 
 //slide in third portfolio section
 var thirdPortfolioSlideInScene = new ScrollMagic.Scene({
@@ -326,10 +346,10 @@ thirdPortfolioSlideInScene.on("enter", function() {
   $(".drift-racer-app-info").addClass("animate-fade-and-move");
 });
 
-thirdPortfolioSlideInScene.on("leave", function() {
-  $(".drift-racer-image").removeClass("animate-fade-and-move");
-  $(".drift-racer-app-info").removeClass("animate-fade-and-move");
-});
+// thirdPortfolioSlideInScene.on("leave", function() {
+//   $(".drift-racer-image").removeClass("animate-fade-and-move");
+//   $(".drift-racer-app-info").removeClass("animate-fade-and-move");
+// });
 
 //scene for removing bg color class for about section - fades to black
 //also fades out third portfolio section

@@ -204,7 +204,7 @@ body {
 	    -ms-flex-align: center;
 	        align-items: center;
 	
-	color: RGBA(205, 205, 205, 1.00);
+	color: RGBA(180, 180, 180, 1.00);
 	line-height: 38px;
 	font-size: 17px;
 }
@@ -305,6 +305,23 @@ body {
     margin-top: -28px;
     margin-bottom: 20px;
     height: auto;
+}
+
+.pomodorank-image {
+    opacity: 0;
+    margin-left: 12px;
+    -webkit-transform: translateX(-48px);
+            transform: translateX(-48px);
+    -webkit-transition: all 1.7s ease-in-out;
+    transition: all 1.7s ease-in-out;
+}
+
+.pomodorank-info {
+    -webkit-transform: translateX(-24px);
+            transform: translateX(-24px);
+    opacity: 0;
+    -webkit-transition: all 1.7s ease-in-out;
+    transition: all 1.7s ease-in-out;
 }
 
 
@@ -571,6 +588,7 @@ body {
     width: 100vw;
     height: 110vh;
     font-size: 17px;
+    font-family: 'Average', serif;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
