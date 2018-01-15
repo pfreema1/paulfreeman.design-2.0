@@ -243,6 +243,7 @@ body {
         display: flex;
         align-items: center;
         flex-direction: column;
+        min-height: 80vh;
     }
     
     
@@ -291,6 +292,7 @@ body {
     margin-top: -28px;
     margin-bottom: 20px;
     height: auto;
+    font-family: $secondaryFont;
 }
 
 .pomodorank-image {
