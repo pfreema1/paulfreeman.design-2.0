@@ -565,6 +565,7 @@ body {
     opacity: 0;
     max-width: 450px;
     padding-top: 10px;
+    width: 100%;
 }
 
 
@@ -574,7 +575,7 @@ body {
     margin-top: 36px;
     margin-bottom: 20px;
     margin: 36px auto 20px auto;
-    width: 260px;
+    width: 170px;
     background-color: #191919;
     font-family: 'Fjalla One', sans-serif;
     color: white;
@@ -587,20 +588,62 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    font-size: 17px;
+    font-size: 14px;
 }
+
+
+
+@media (min-width: 380px) {
+
+
+
+.launch-app-button,
+.github-button-container {
+        width: 260px;
+        font-size: 17px
+}
+    }
 
 .fa-external-link--launch-app-button {
-    font-size: 40px;
-    margin-right: 28px;
+    font-size: 30px;
+    margin-right: 15px;
 }
+
+@media (min-width: 380px) {
+
+.fa-external-link--launch-app-button {
+        font-size: 40px;
+        margin-right: 28px
+}
+    }
 
 .fa-youtube-play {
-    font-size: 40px;
-    margin-right: 28px;
+    font-size: 30px;
+    margin-right: 15px;
 }
 
+@media (min-width: 380px) {
+
+.fa-youtube-play {
+        font-size: 40px;
+        margin-right: 28px
+}
+    }
+
 .github-svg {
+    height: 40px;
+    padding-right: 15px;
+}
+
+@media (min-width: 380px) {
+
+.github-svg {
+        height: 52px;
+        padding-right: 20px
+}
+    }
+
+.github-footer {
     height: 52px;
     padding-right: 20px;
 }

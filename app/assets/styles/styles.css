@@ -19,7 +19,7 @@ $marginBetweenSectionHeaderAndContent: 40px;
 
 /******  MIXINS ********/
 @define-mixin atSmall {
-    @media (min-width: 530px) {
+    @media (min-width: 380px) {
         @mixin-content;
     }
 }
@@ -534,6 +534,7 @@ body {
     opacity: 0;
     max-width: 450px;
     padding-top: 10px;
+    width: 100%;
 }
 
 
@@ -543,27 +544,52 @@ body {
     margin-top: 36px;
     margin-bottom: 20px;
     margin: 36px auto 20px auto;
-    width: 260px;
+    width: 170px;
     background-color: $bodyColorStart;
     font-family: $primaryFont;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: $buttonFontSize;
+    font-size: 14px;
+
+    @mixin atSmall {
+        width: 260px;
+        font-size: $buttonFontSize;
+    }
 }
 
 .fa-external-link--launch-app-button {
-    font-size: 40px;
-    margin-right: 28px;
+    font-size: 30px;
+    margin-right: 15px;
+
+    @mixin atSmall {
+        font-size: 40px;
+        margin-right: 28px;
+    }
 }
 
 .fa-youtube-play {
-    font-size: 40px;
-    margin-right: 28px;
+    font-size: 30px;
+    margin-right: 15px;
+
+    @mixin atSmall {
+        font-size: 40px;
+        margin-right: 28px;
+    }
 }
 
 .github-svg {
+    height: 40px;
+    padding-right: 15px;
+
+    @mixin atSmall {
+        height: 52px;
+        padding-right: 20px;
+    }
+}
+
+.github-footer {
     height: 52px;
     padding-right: 20px;
 }
