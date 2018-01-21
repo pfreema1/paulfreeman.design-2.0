@@ -40,6 +40,65 @@ $marginBetweenSectionHeaderAndContent: 40px;
 
 
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+/*
+
+        END MEYERS RESET
+
+*/
+
+
 
 
 
@@ -239,10 +298,11 @@ body {
     margin-bottom: 80px;
     overflow: hidden;
 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
     @mixin atLarge {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
         min-height: 80vh;
     }
     
@@ -288,7 +348,7 @@ body {
     width: 90vw;
     max-width: 700px;
     padding: 28px;
-    margin-left: 28px;
+    // margin-left: 28px;
     margin-top: -28px;
     margin-bottom: 20px;
     height: auto;
@@ -297,13 +357,13 @@ body {
 
 .pomodorank-image {
     opacity: 0;
-    margin-left: 12px;
-    transform: translateX(-48px);
+    // margin-left: 12px;
+    // transform: translateX(-48px);
     transition: all $primaryAnimationTime ease-in-out;
 }
 
 .pomodorank-info {
-    transform: translateX(-24px);
+    // transform: translateX(-24px);
     opacity: 0;
     transition: all $primaryAnimationTime ease-in-out;
 }
@@ -321,30 +381,30 @@ body {
 
 .climbing-app-image {
     opacity: 0;
-    transform: translateX(16px);
+    // transform: translateX(16px);
     transition: all $primaryAnimationTime ease-in-out;
 
 }
 
 
 .climbing-wall-app-info {
-    transform: translateX(-24px);
+    // transform: translateX(-24px);
     opacity: 0;
     transition: all $primaryAnimationTime ease-in-out;
 }
 
 .clear-view-image {
     opacity: 0;
-    margin-left: 12px;
-    transform: translateX(-48px);
+    // margin-left: 12px;
+    // transform: translateX(-48px);
     transition: all $primaryAnimationTime ease-in-out;
 }
 
 .clear-view-info {
     // margin-left: 0px;
     // overflow: hidden;
-    margin-right: 20px;
-    transform: translateX(24px);
+    // margin-right: 20px;
+    // transform: translateX(24px);
     opacity: 0;
     transition: all $primaryAnimationTime ease-in-out;
 }
@@ -353,12 +413,12 @@ body {
 
 .drift-racer-image {
     opacity: 0;
-    transform: translateX(16px);
+    // transform: translateX(16px);
     transition: all $primaryAnimationTime ease-in-out;
 }
 
 .drift-racer-app-info {
-    transform: translateX(-24px);
+    // transform: translateX(-24px);
     opacity: 0;
     transition: all $primaryAnimationTime ease-in-out;
 }
@@ -368,7 +428,7 @@ body {
 
 
 .animate-fade-and-move {
-    transform: translateX(0px);
+    // transform: translateX(0px);
     opacity: 1;
 }
 
@@ -445,9 +505,9 @@ body {
     background-color: $learnMoreColor;
     font-size: $normalFontSize;
     line-height: $lineHeight;
-    width: 98vw;
+    // width: 98vw;
     position: relative;
-    right: 56px; 
+    // right: 56px; 
     top: -29px;
     padding: 36px 28px;
     justify-content: center;
@@ -456,6 +516,10 @@ body {
     transform-origin: top center;
     transform: scale(0, 0);
     display: none;
+
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
 
     @mixin atMedium {
         width: 550px;
