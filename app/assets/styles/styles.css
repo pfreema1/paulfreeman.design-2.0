@@ -348,7 +348,16 @@ body {
 }
 
 .portfolio-project__image-container {
-  // overflow: hidden;
+  @mixin atLarge {
+    transition: all 0.5s;
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+}
+
+.image-link {
+  z-index: 99999;
 }
 
 .portfolio-project__image-container img {
@@ -389,15 +398,22 @@ body {
   font-family: $secondaryFont;
 }
 
+.day-night-toggle-image {
+  opacity: 0;
+  transition: all $primaryAnimationTime ease-in-out;
+}
+
+.day-night-toggle-info {
+  opacity: 0;
+  transition: all $primaryAnimationTime ease-in-out;
+}
+
 .pomodorank-image {
   opacity: 0;
-  // margin-left: 12px;
-  // transform: translateX(-48px);
   transition: all $primaryAnimationTime ease-in-out;
 }
 
 .pomodorank-info {
-  // transform: translateX(-24px);
   opacity: 0;
   transition: all $primaryAnimationTime ease-in-out;
 }
@@ -456,6 +472,10 @@ body {
   opacity: 1;
 }
 
+#mail-submit {
+  cursor: pointer;
+}
+
 .portfolio-project__header {
   text-align: center;
   font-family: $primaryFont;
@@ -487,6 +507,13 @@ body {
 .button {
   width: 200px;
   height: 64px;
+
+  @mixin atLarge {
+    transition: all 0.5s;
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
 }
 
 #triggerThirdPortfolioAnim {
@@ -506,6 +533,7 @@ body {
   font-family: $primaryFont;
   font-size: $buttonFontSize;
   padding-left: 17px;
+  cursor: pointer;
 }
 
 .icon-down-open {
@@ -805,6 +833,17 @@ form {
     margin-left: -9px;
   }
 }
+
+/* .footer__codepen,
+.footer__github,
+.footer__facebook {
+  @mixin atLarge {
+    transition: all 0.5s;
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+} */
 
 .link-in-text {
   font-weight: bolder;

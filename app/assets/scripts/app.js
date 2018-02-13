@@ -289,6 +289,17 @@ var myLatestWorkBarScene = new ScrollMagic.Scene({
 
 myLatestWorkBarScene.on("enter", function() {
   $(".latest-work-bar").addClass("animate-bar");
+  $(".day-night-toggle-image").addClass("animate-fade-and-move");
+  $(".day-night-toggle-info").addClass("animate-fade-and-move");
+});
+
+//slide in pomodorank portfolio section
+var pomodorankSlideInScene = new ScrollMagic.Scene({
+  triggerElement: "#triggerPomodorankAnim",
+  triggerHook: 1
+}).addTo(controller);
+
+pomodorankSlideInScene.on("enter", function() {
   $(".pomodorank-image").addClass("animate-fade-and-move");
   $(".pomodorank-info").addClass("animate-fade-and-move");
 });

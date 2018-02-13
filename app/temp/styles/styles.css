@@ -353,7 +353,20 @@ body {
 }
   }
 
+@media (min-width: 1200px) {
+
 .portfolio-project__image-container {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s
+}
+    .portfolio-project__image-container:hover {
+      -webkit-transform: scale(1.01);
+              transform: scale(1.01);
+    }
+  }
+
+.image-link {
+  z-index: 99999;
 }
 
 .portfolio-project__image-container img {
@@ -402,6 +415,18 @@ body {
   margin-bottom: 20px;
   height: auto;
   font-family: "Average", serif;
+}
+
+.day-night-toggle-image {
+  opacity: 0;
+  -webkit-transition: all 1.7s ease-in-out;
+  transition: all 1.7s ease-in-out;
+}
+
+.day-night-toggle-info {
+  opacity: 0;
+  -webkit-transition: all 1.7s ease-in-out;
+  transition: all 1.7s ease-in-out;
 }
 
 .pomodorank-image {
@@ -467,6 +492,10 @@ body {
   opacity: 1;
 }
 
+#mail-submit {
+  cursor: pointer;
+}
+
 .portfolio-project__header {
   text-align: center;
   font-family: "Fjalla One", sans-serif;
@@ -502,6 +531,18 @@ body {
   height: 64px;
 }
 
+@media (min-width: 1200px) {
+
+.button {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s
+}
+    .button:hover {
+      -webkit-transform: scale(1.01);
+              transform: scale(1.01);
+    }
+  }
+
 #triggerThirdPortfolioAnim {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -526,6 +567,7 @@ body {
   font-family: "Fjalla One", sans-serif;
   font-size: 17px;
   padding-left: 17px;
+  cursor: pointer;
 }
 
 .icon-down-open {
@@ -896,6 +938,17 @@ form .submit-wrapper input {
     padding: 0 10px 0 0px;
     margin-left: -9px;
   }
+
+/* .footer__codepen,
+.footer__github,
+.footer__facebook {
+  @mixin atLarge {
+    transition: all 0.5s;
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+} */
 
 .link-in-text {
   font-weight: bolder;
