@@ -256,6 +256,8 @@ $("html, body").css({
 //re-enable scrolling, jump to top of page, fade out loader, and download images
 //when initial items are downloaded
 
+/*****************************/
+
 $(document).ready(function() {
   $(".loading-anim-container").addClass("fade-out-loader");
 
@@ -279,7 +281,6 @@ function lazyLoadImages() {
   }
 }
 
-
 //slide in first portfolio project and animate the latest work bar
 var myLatestWorkBarScene = new ScrollMagic.Scene({
   triggerElement: "#triggerLatestWorkBar",
@@ -291,22 +292,6 @@ myLatestWorkBarScene.on("enter", function() {
   $(".pomodorank-image").addClass("animate-fade-and-move");
   $(".pomodorank-info").addClass("animate-fade-and-move");
 });
-
-
-/*// ORIGINAL
-myLatestWorkBarScene.on("enter", function() {
-  $(".latest-work-bar").addClass("animate-bar");
-  $(".climbing-app-image").addClass("animate-fade-and-move");
-  $(".climbing-wall-app-info").addClass("animate-fade-and-move");
-});
-
-*/
-
-// myLatestWorkBarScene.on("leave", function() {
-//   $(".latest-work-bar").removeClass("animate-bar");
-//   $(".climbing-app-image").removeClass("animate-fade-and-move");
-//   $(".climbing-wall-app-info").removeClass("animate-fade-and-move");
-// });
 
 //slide in climbing-wall-app portfolio secton
 var climbingWallAppSlideInScene = new ScrollMagic.Scene({
